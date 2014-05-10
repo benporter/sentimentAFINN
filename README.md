@@ -17,3 +17,4 @@ In order to use the load() command in the package to access the sentiment scores
     names(sentDict) <- c("Word","SentimentScore")
     save(sentDict,file="AFINN-111.RData")
     
+Now the AFINN sentiment dictionary can be accessed from within the package using the load() command
