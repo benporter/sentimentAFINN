@@ -23,4 +23,4 @@ In order to use the load() command in the package to access the sentiment scores
     
 Now the AFINN sentiment dictionary can be accessed from within the package using the load() command
 
-        load("data/AFINN-111.RData")
+    load("data/AFINN-111.RData")
