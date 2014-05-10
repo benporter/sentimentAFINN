@@ -22,3 +22,5 @@ In order to use the load() command in the package to access the sentiment scores
     save(sentDict,file="AFINN-111.RData")
     
 Now the AFINN sentiment dictionary can be accessed from within the package using the load() command
+
+        load("data/AFINN-111.RData")
