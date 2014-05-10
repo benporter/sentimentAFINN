@@ -4,6 +4,8 @@ library(sqldf)
 library(tm)
 library(ggplot2)
 
+#this might need to remove the
+load("data/AFINN-111.RData")
 
 n <- length(tweets)
 
