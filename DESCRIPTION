@@ -7,3 +7,4 @@ Author: Ben Porter
 Maintainer: benjamin.s.porter (at) gmail (dot) com
 Description: 
 License: 
+Depends:  stringr,sqldf,tm,ggplot2

@@ -1,9 +1,9 @@
 Package: sentimentAFINN
 Type: Package
-Title: What the package does (short line)
+Title: Compute sentiment using Finn Årup Nielsen's word list
 Version: 1.0
 Date: 2014-05-09
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Ben Porter
+Maintainer: benjamin.s.porter (at) gmail (dot) com
+Description: 
+License: 
