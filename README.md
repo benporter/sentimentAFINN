@@ -13,8 +13,11 @@ Packages accepts a corpus object from the tm (text mining) package
 Packages returns a dataframe of four columns:
 
 1) Document index, 1 through n, from original corpus
+
 2) Sentiment score for the document
+
 3) Normalized sentiment score: sentiment score / non-trivial words
+
 4) Transformed document, post tm mapping transformations
 
 ## Installing the sentimentAFINN package
@@ -39,6 +42,30 @@ Use the <i>sentiment</i> function from the package library
 See below for a more complete example
 
 ## Example:  Finding the sentiment of Bible verses
+
+Download the King James Bible as a sqlite database.  You can do it manually, or use this R code.  I choose to save it to my "home/R/Text Mining/bible" directoary
+
+        download.file(url="http://simoncozens.github.io/open-source-bible-data/cooked/sqlite/kjv.db","~/R/Text Mining/bible/kjv.db")
+
+I leaned heavily on <a href="http://grumpylemming.com/blog/2012/12/27/accessing-sqlite-data-from-r/">The Grumpy Lemming blog post</a> for assistance with accessing a sqlite database from R.
+
+Download and install the RSQLite package
+        
+        install.packages("RSQLite")
+        library(RSQLite)
+
+Establish a driver and connect to the database
+
+        sqlite_driver <- dbDriver("SQLite")
+        connectionToDB <- dbConnect(sqlite_driver, "~/R/Text Mining/bible/kjv.db")
+
+List out the tables in the database and then list the fields in the "bible" database
+        
+        dbListTables(connectionToDB)
+        [1] "bible"              "bible_fts"          "bible_fts_content"  "bible_fts_segdir"   "bible_fts_segments" "metadata"  
+        
+        dbListFields(connectionToDB, "bible")
+        [1] "book"    "chapter" "verse"   "content"
 
 ## Misc
 
