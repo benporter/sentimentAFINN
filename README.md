@@ -13,11 +13,8 @@ Packages accepts a corpus object from the tm (text mining) package
 Packages returns a dataframe of four columns:
 
 1) Document index, 1 through n, from original corpus
-
 2) Sentiment score for the document
-
 3) Normalized sentiment score: sentiment score / non-trivial words
-
 4) Transformed document, post tm mapping transformations
 
 ## Installing the sentimentAFINN package
