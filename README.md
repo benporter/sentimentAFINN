@@ -143,6 +143,22 @@ The contentCorp is of the right class to send to the sentiment function from the
         3rd Qu.:23277   3rd Qu.:  1.0000   3rd Qu.: 0.08696                           
         Max.   :31036   Max.   : 25.0000   Max.   : 2.00000                           
 
+Create histograms of the sentiment and normalized sentiment
+
+        hist(answer$SentimentScore,nclass=40)
+        hist(answer$SentimentScoreNormalized,nclass=40)
+
+Get the document number for the highest sentiment verses and print those verses from the original corpus.
+
+        library(sqldf)
+        top10 <- sqldf("select *
+                from 
+                (select * from
+                 answer
+                 order by SentimentScore desc)
+                limit 10")
+        bibleCorp[["content"]][top10$DocNum]
+        
 ## Misc
 
 In order to use the load() command in the package to access the sentiment scores, I had to transform the AFINN-111.txt file to the .RData format. See below for the code I used to prepare the file.
