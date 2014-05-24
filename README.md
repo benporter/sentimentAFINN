@@ -22,7 +22,7 @@ Packages returns a dataframe of four columns:
 
 ## Installing the sentimentAFINN package
 
-The sentimentAFINN package is currently only on github and not cran yet.  To install the package from github, use the install_guthub() function from the devtools package.  You only have to do this once, then you can just call the library() function to load the sentimentAFINN package.
+The sentimentAFINN package is currently only on github and not cran yet.  To install the package from github, use the install_guthub() function from the devtools package.  You only have to do this once on your machine, then you can just call the library() function to load the sentimentAFINN package.
 
         install.packages("devtools")
         library(devtools)
@@ -35,7 +35,7 @@ load the library
 
         library(sentimentAFINN)
 
-Use the <i>sentiment</i> function from the package library
+Use the <i>sentiment</i> function from the sentiment library
 
         mySentimentScores <- sentiment(myCorpus)
 
